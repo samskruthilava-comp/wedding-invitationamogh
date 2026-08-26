@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Adrian &amp; Celeste — Wedding Invitation</title>
+<meta name="description" content="Join us for the wedding celebration of Adrian and Celeste on Saturday, 12 September 2026 at Casa del Lago, Lake Como." />
+<meta name="theme-color" content="#F8F6F0" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body class="is-sealed">
+
+<!-- ============ ambient decorative layer ============ -->
+<div class="ambience" aria-hidden="true">
+  <div class="petals" id="petals"></div>
+  <div class="grain"></div>
+  <div class="vignette"></div>
+</div>
+
+<!-- ============ 1. ENVELOPE GATE ============ -->
+<div class="gate" id="gate">
+  <div class="gate__paper">
+    <div class="gate__texture"></div>
+    <div class="gate__fold gate__fold--tl"></div>
+    <div class="gate__fold gate__fold--tr"></div>
+    <div class="gate__flap" id="flap"></div>
+
+    <p class="gate__eyebrow" data-gate-item>A royal love story</p>
+    <div class="rule rule--gate" data-gate-item>
+      <span class="rule__line"></span>
+      <svg class="rule__mark" viewBox="0 0 40 16" aria-hidden="true"><path d="M20 2c3 4 6 5 10 6-4 1-7 2-10 6-3-4-6-5-10-6 4-1 7-2 10-6Z" fill="currentColor" opacity=".55"/><circle cx="4" cy="8" r="1.4" fill="currentColor" opacity=".4"/><circle cx="36" cy="8" r="1.4" fill="currentColor" opacity=".4"/></svg>
+      <span class="rule__line"></span>
+    </div>
+
+    <button class="seal" id="seal" type="button" aria-label="Open the invitation">
+      <span class="seal__glow"></span>
+      <svg class="seal__body" viewBox="0 0 200 200" aria-hidden="true">
+        <defs>
+          <radialGradient id="waxLight" cx="38%" cy="30%" r="78%">
+            <stop offset="0%" stop-color="#B9C4A6"/>
+            <stop offset="45%" stop-color="#96A483"/>
+            <stop offset="100%" stop-color="#6C7A5B"/>
+          </radialGradient>
+          <filter id="waxRough"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="3" seed="7"/><feDisplacementMap in="SourceGraphic" scale="7"/></filter>
+        </defs>
+        <g filter="url(#waxRough)">
+          <circle cx="100" cy="100" r="76" fill="url(#waxLight)"/>
+        </g>
+        <circle cx="100" cy="100" r="60" fill="none" stroke="#5E6B4E" stroke-opacity=".38" stroke-width="1.5"/>
+        <circle cx="100" cy="100" r="55" fill="none" stroke="#C9D3B6" stroke-opacity=".35" stroke-width="1"/>
+      </svg>
+      <span class="seal__monogram">A</span>
+      <span class="seal__shine"></span>
+    </button>
+
+    <p class="gate__sub" data-gate-item>From the kingdom of God</p>
+
+    <span class="gate__cue" data-gate-item>
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5 12.5 8 4 13.5V2.5Z" fill="currentColor"/></svg>
+      Tap to open
+    </span>
+  </div>
+</div>
+
+<!-- ============ 2. CURTAIN + COLUMN STAGE ============ -->
+<div class="stage" id="stage" aria-hidden="true">
+  <div class="stage__valance"></div>
+  <div class="curtain curtain--left"></div>
+  <div class="curtain curtain--right"></div>
+  <div class="column column--left"></div>
+  <div class="column column--right"></div>
+</div>
+
+<main class="page" id="page">
+
+  <!-- ============ 3. HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="hero__frame" data-parallax="0.18">
+      <div class="hero__art">
+        <div class="hero__wash"></div>
+        <svg class="hero__scene" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#F6E9D2"/><stop offset="46%" stop-color="#EBD3B0"/><stop offset="100%" stop-color="#C9A97F"/>
+            </linearGradient>
+            <linearGradient id="hillA" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#8E9C7A"/><stop offset="100%" stop-color="#5C6A4A"/></linearGradient>
+            <linearGradient id="hillB" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#667554"/><stop offset="100%" stop-color="#3C4832"/></linearGradient>
+            <linearGradient id="lake" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#E0C79E"/><stop offset="60%" stop-color="#BFA47E"/><stop offset="100%" stop-color="#8E7C60"/></linearGradient>
+          </defs>
+          <rect width="1200" height="700" fill="url(#sky)"/>
+          <circle cx="880" cy="190" r="86" fill="#FFF6E4" opacity=".72"/><circle cx="880" cy="190" r="150" fill="#FFEFD4" opacity=".26"/>
+          <path d="M0 430 L180 300 L330 400 L470 292 L640 430 Z" fill="url(#hillA)" opacity=".85"/>
+          <path d="M520 440 L700 286 L880 402 L1030 320 L1200 452 L1200 470 L520 470 Z" fill="url(#hillB)" opacity=".9"/>
+          <rect y="452" width="1200" height="248" fill="url(#lake)"/>
+          <g opacity=".22" fill="#F7F3EA">
+            <rect x="0" y="486" width="1200" height="2" rx="1"/><rect x="120" y="530" width="960" height="2" rx="1"/><rect x="240" y="580" width="720" height="2" rx="1"/><rect x="380" y="634" width="440" height="2" rx="1"/>
+          </g>
+        </svg>
+      </div>
+      <div class="hero__scrim"></div>
+      <span class="hero__seam"></span>
+    </div>
+
+    <div class="hero__copy">
+      <p class="hero__eyebrow" data-letters>We are getting married</p>
+      <h1 class="hero__names">
+        <span class="hero__name" data-letters-script>Adrian</span>
+        <span class="hero__amp">&amp;</span>
+        <span class="hero__name" data-letters-script>Celeste</span>
+      </h1>
+    </div>
+
+    <span class="hero__hint" aria-hidden="true"><span class="hero__hint-line"></span>Scroll</span>
+  </section>
+
+  <!-- ============ 4. COUNTDOWN ============ -->
+  <section class="band band--tight countdown">
+    <p class="kicker" data-reveal>Countdown</p>
+    <h2 class="heading" data-reveal style="--d:.06s">Until 12 September 2026</h2>
+    <div class="rule" data-reveal style="--d:.12s"><span class="rule__line"></span><svg class="rule__mark" viewBox="0 0 40 16" aria-hidden="true"><path d="M20 2c3 4 6 5 10 6-4 1-7 2-10 6-3-4-6-5-10-6 4-1 7-2 10-6Z" fill="currentColor" opacity=".55"/></svg><span class="rule__line"></span></div>
+
+    <ul class="clock" id="clock" data-reveal style="--d:.18s">
+      <li class="clock__unit"><span class="clock__val" data-unit="days">00</span><span class="clock__label">Days</span></li>
+      <li class="clock__sep" aria-hidden="true">:</li>
+      <li class="clock__unit"><span class="clock__val" data-unit="hours">00</span><span class="clock__label">Hours</span></li>
+      <li class="clock__sep" aria-hidden="true">:</li>
+      <li class="clock__unit"><span class="clock__val" data-unit="minutes">00</span><span class="clock__label">Minutes</span></li>
+      <li class="clock__sep" aria-hidden="true">:</li>
+      <li class="clock__unit"><span class="clock__val" data-unit="seconds">00</span><span class="clock__label">Seconds</span></li>
+    </ul>
+  </section>
+
+  <!-- ============ 5. VENUE ============ -->
+  <section class="band venue">
+    <p class="kicker" data-reveal>The Venue</p>
+    <h2 class="heading heading--script" data-reveal style="--d:.06s">Casa del Lago</h2>
+    <p class="lede" data-reveal style="--d:.12s">Via della Riva 14, Lake Como, Italy</p>
+
+    <figure class="plate" data-reveal="wipe" style="--d:.18s">
+      <div class="plate__inner" data-parallax="0.06">
+        <svg viewBox="0 0 800 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="800" height="560" fill="#D9CFBE"/>
+          <rect y="360" width="800" height="200" fill="#A8A08F"/>
+          <g fill="#EDE4D5">
+            <rect x="250" y="150" width="300" height="230" rx="4"/>
+            <path d="M240 152 400 68 560 152Z"/>
+          </g>
+          <g fill="#8E9A7C" opacity=".75">
+            <rect x="286" y="200" width="40" height="80" rx="20"/><rect x="380" y="200" width="40" height="80" rx="20"/><rect x="474" y="200" width="40" height="80" rx="20"/>
+            <rect x="366" y="300" width="68" height="80" rx="34"/>
+          </g>
+          <g fill="#5E6B4E" opacity=".8">
+            <path d="M150 380c0-60 14-120 24-120s24 60 24 120Z"/><path d="M620 380c0-52 12-104 21-104s21 52 21 104Z"/>
+          </g>
+          <g opacity=".18" fill="#FFF"><rect y="410" width="800" height="2"/><rect x="90" y="464" width="620" height="2"/></g>
+        </svg>
+      </div>
+      <figcaption class="plate__cap">Saturday, 12 September 2026</figcaption>
+    </figure>
+
+    <a class="btn" href="https://maps.google.com/?q=Lake+Como" target="_blank" rel="noopener" data-reveal style="--d:.24s">
+      <span>View on Map</span>
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.6c-2.4 0-4.4 2-4.4 4.4 0 3.3 4.4 8.4 4.4 8.4s4.4-5.1 4.4-8.4c0-2.4-2-4.4-4.4-4.4Zm0 6.2a1.8 1.8 0 1 1 0-3.6 1.8 1.8 0 0 1 0 3.6Z" fill="currentColor"/></svg>
+    </a>
+
+    <div class="prose">
+      <p data-reveal>A lakeside villa of pale stone and long shuttered windows, held between the water and the hills. Its terraces step down through lemon trees to a quiet landing where the boats come in.</p>
+      <p data-reveal style="--d:.08s">The gardens were laid out to be walked slowly. Gravel paths, clipped hedge, a fountain that has been running longer than anyone can account for.</p>
+      <p data-reveal style="--d:.16s">In the late afternoon the light comes off the lake and turns the whole facade the colour of honey. That is the hour we chose.</p>
+    </div>
+  </section>
+
+  <!-- ============ 6. ORDER OF THE DAY ============ -->
+  <section class="band schedule">
+    <p class="kicker" data-reveal>The Wedding</p>
+    <h2 class="heading heading--script" data-reveal style="--d:.06s">Order of the Day</h2>
+    <div class="rule" data-reveal style="--d:.12s"><span class="rule__line"></span><svg class="rule__mark" viewBox="0 0 40 16" aria-hidden="true"><path d="M20 2c3 4 6 5 10 6-4 1-7 2-10 6-3-4-6-5-10-6 4-1 7-2 10-6Z" fill="currentColor" opacity=".55"/></svg><span class="rule__line"></span></div>
+
+    <ol class="timeline" id="timeline">
+      <span class="timeline__track" aria-hidden="true"><span class="timeline__fill" id="timelineFill"></span></span>
+      <li class="timeline__item" data-reveal><span class="timeline__dot" aria-hidden="true"></span><time>2:30 PM</time><h3>Guests Arrive</h3></li>
+      <li class="timeline__item" data-reveal><span class="timeline__dot" aria-hidden="true"></span><time>3:30 PM</time><h3>The Ceremony</h3></li>
+      <li class="timeline__item" data-reveal><span class="timeline__dot" aria-hidden="true"></span><time>4:15 PM</time><h3>Aperitivo in the Gardens</h3></li>
+      <li class="timeline__item" data-reveal><span class="timeline__dot" aria-hidden="true"></span><time>5:30 PM</time><h3>Sunset Portraits</h3></li>
+      <li class="timeline__item" data-reveal><span class="timeline__dot" aria-hidden="true"></span><time>6:30 PM</time><h3>Reception Dinner</h3></li>
+      <li class="timeline__item" data-reveal><span class="timeline__dot" aria-hidden="true"></span><time>8:30 PM</time><h3>Speeches &amp; Toasts</h3></li>
+      <li class="timeline__item" data-reveal><span class="timeline__dot" aria-hidden="true"></span><time>9:00 PM</time><h3>Cake Cutting</h3></li>
+      <li class="timeline__item" data-reveal><span class="timeline__dot" aria-hidden="true"></span><time>9:30 PM</time><h3>First Dance</h3></li>
+      <li class="timeline__item" data-reveal><span class="timeline__dot" aria-hidden="true"></span><time>10:00 PM</time><h3>Dancing Under the Stars</h3></li>
+      <li class="timeline__item" data-reveal><span class="timeline__dot" aria-hidden="true"></span><time>11:30 PM</time><h3>Sparkler Farewell</h3></li>
+    </ol>
+  </section>
+
+  <!-- ============ 7. DRESS CODE ============ -->
+  <section class="band dress">
+    <p class="kicker" data-reveal>Dress Code</p>
+    <div class="card" data-reveal="wipe" style="--d:.08s">
+      <span class="card__corner card__corner--tl"></span><span class="card__corner card__corner--tr"></span>
+      <span class="card__corner card__corner--bl"></span><span class="card__corner card__corner--br"></span>
+      <h2 class="heading heading--script">Timeless Royal Elegance</h2>
+      <p class="dress__tags">Formal <i>&middot;</i> Sophisticated <i>&middot;</i> Regal</p>
+      <ul class="swatches" aria-label="Suggested palette">
+        <li style="--c:#5E6B4E"><span></span>Olive</li>
+        <li style="--c:#8E9A7C"><span></span>Sage</li>
+        <li style="--c:#C2A878"><span></span>Champagne</li>
+        <li style="--c:#7B2E3B"><span></span>Claret</li>
+        <li style="--c:#2E3440"><span></span>Midnight</li>
+      </ul>
+      <p class="dress__note">Come dressed for a celebration worthy<br />of a love story that belongs among the ages.</p>
+    </div>
+  </section>
+
+  <!-- ============ 8. SCRIPTURE ============ -->
+  <section class="band band--tight verse">
+    <span class="verse__quote" aria-hidden="true">&ldquo;</span>
+    <blockquote data-reveal>
+      <p>What God has joined together,<br />let no one separate.</p>
+      <cite data-reveal style="--d:.12s">Mark 10:9</cite>
+    </blockquote>
+  </section>
+
+  <!-- ============ 9. INVITATION DETAILS ============ -->
+  <section class="band invite">
+    <div class="invite__names" data-reveal>
+      <span class="invite__name">Adrian</span>
+      <span class="invite__amp">&amp;</span>
+      <span class="invite__name">Celeste</span>
+    </div>
+    <p class="lede lede--wide" data-reveal style="--d:.08s">One love. One promise. One beautiful forever.</p>
+    <div class="rule" data-reveal style="--d:.14s"><span class="rule__line"></span><svg class="rule__mark" viewBox="0 0 40 16" aria-hidden="true"><path d="M20 2c3 4 6 5 10 6-4 1-7 2-10 6-3-4-6-5-10-6 4-1 7-2 10-6Z" fill="currentColor" opacity=".55"/></svg><span class="rule__line"></span></div>
+    <dl class="facts">
+      <div data-reveal style="--d:.18s"><dt>The Celebration</dt><dd>Saturday, 12 September 2026</dd></div>
+      <div data-reveal style="--d:.24s"><dt>The Place</dt><dd>Casa del Lago, Lake Como</dd></div>
+      <div data-reveal style="--d:.30s"><dt>The Hour</dt><dd>Half past two in the afternoon</dd></div>
+    </dl>
+  </section>
+
+  <!-- ============ 10. GIFT ============ -->
+  <section class="band band--tight gift">
+    <p class="kicker" data-reveal>Wedding Gift</p>
+    <h2 class="heading heading--script" data-reveal style="--d:.06s">Your presence is our greatest gift</h2>
+    <p class="prose__single" data-reveal style="--d:.12s">If you would like to honour us with something more, we kindly prefer a monetary contribution. Details will be shared separately with your confirmation.</p>
+  </section>
+
+  <!-- ============ 11. RSVP ============ -->
+  <section class="band rsvp" id="rsvp">
+    <p class="kicker" data-reveal>RSVP</p>
+    <h2 class="heading heading--script" data-reveal style="--d:.06s">Kindly Reply</h2>
+
+    <form class="form" id="rsvpForm" novalidate data-reveal="wipe" style="--d:.12s">
+      <fieldset class="field">
+        <legend>Will you be joining us? <b>*</b></legend>
+        <div class="choices">
+          <label class="choice"><input type="radio" name="attending" value="yes" required /><span>Delighted to accept</span></label>
+          <label class="choice"><input type="radio" name="attending" value="no" /><span>Regretfully unable to attend</span></label>
+        </div>
+      </fieldset>
+
+      <div class="conditional" id="ifYes">
+        <fieldset class="field">
+          <legend>Which events will you attend? <b>*</b></legend>
+          <div class="choices choices--stack">
+            <label class="choice"><input type="checkbox" name="events" value="cruise" /><span>Welcome Cruise &middot; 11 September</span></label>
+            <label class="choice"><input type="checkbox" name="events" value="wedding" /><span>Ceremony &amp; Reception &middot; 12 September</span></label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label class="label" for="guestCount">Number of guests in your party</label>
+          <div class="stepper">
+            <button type="button" class="stepper__btn" data-step="-1" aria-label="Fewer guests">&minus;</button>
+            <output class="stepper__val" id="guestCount">1</output>
+            <button type="button" class="stepper__btn" data-step="1" aria-label="More guests">+</button>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label" for="principal">Principal guest</label>
+          <input class="input" id="principal" name="principal" type="text" placeholder="Full name" autocomplete="name" />
+        </div>
+
+        <fieldset class="field">
+          <legend>Will any children be accompanying you?</legend>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="children" value="yes" /><span>Yes</span></label>
+            <label class="choice"><input type="radio" name="children" value="no" /><span>No</span></label>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="field">
+        <label class="label" for="message">A message for the couple</label>
+        <textarea class="input" id="message" name="message" rows="4" placeholder="Write a few words"></textarea>
+      </div>
+
+      <p class="form__error" id="formError" role="alert" hidden></p>
+      <button class="btn btn--solid" type="submit">Submit Response</button>
+    </form>
+
+    <div class="thanks" id="thanks" hidden>
+      <svg class="thanks__mark" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".4"/><path d="M15 24.5 21.5 31 33.5 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <h3>Thank you</h3>
+      <p id="thanksNote">Your reply has been recorded.</p>
+    </div>
+  </section>
+
+  <!-- ============ 12. FOOTER ============ -->
+  <footer class="footer">
+    <p class="footer__names">Adrian &amp; Celeste</p>
+    <span class="footer__star" aria-hidden="true">&#10022;</span>
+    <p class="footer__line">&ldquo;Two souls, one heart, one forever.&rdquo;</p>
+    <p class="footer__date">Saturday, 12 September 2026</p>
+    <p class="footer__tag">#AdrianAndCeleste2026</p>
+  </footer>
+</main>
+
+<script src="main.js"></script>
+</body>
+</html>

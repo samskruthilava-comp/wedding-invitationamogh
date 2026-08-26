@@ -46,8 +46,25 @@ Then open http://localhost:4321
 | Depth parallax on hero and venue plate | `[data-parallax]` |
 | Drifting rose petals | `seedPetals()` |
 | RSVP: conditional section, guest stepper, animated check on success | `wireForm()` |
+| Placeholder frames: floating mark, hover lift | `.ph` |
 
-Parallax and the timeline draw share one rAF-throttled scroll listener.
+Parallax, the timeline draw and the reveal pass share one rAF-throttled scroll listener.
+
+Reveals are driven by measuring each element's layout box, not by IntersectionObserver.
+The `wipe` variant rests at `clip-path: inset(0 0 100% 0)`, and Chrome folds an element's
+own clip into its intersection rectangle, so an observed wipe element reports zero
+intersection and never earns the class that would unclip it. Measuring geometry avoids
+that deadlock and fails safe: if the scroll handler never runs, content is still shown.
+
+## Placeholder slots
+
+Sections that expect your own photography use `<figure class="ph">` frames, drawn in CSS
+and labelled with the crop they expect. Swap each one for an `<img>` of the same ratio:
+
+| Slot | Ratio | Count |
+|---|---|---|
+| Our Story portrait (`.ph--portrait`) | 2:3 | 1 |
+| Gallery frames (`.ph--frame`) | 4:5 | 6 |
 
 ## Making it yours
 

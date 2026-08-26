@@ -101,21 +101,39 @@
 
   /* ---------------------------------------------------------------------------
      Scroll reveals
+
+     Driven by geometry rather than IntersectionObserver. An earlier version
+     observed the elements directly, which deadlocked the `wipe` variant: its
+     resting state is clip-path: inset(0 0 100% 0), Chrome folds an element's
+     own clip into its intersection rectangle, so a clipped element reports
+     zero intersection and never earns the class that would unclip it.
+     Measuring the layout box sidesteps that entirely, and it degrades to
+     "everything visible" if anything here throws.
      --------------------------------------------------------------------------- */
+  var revealQueue = [];
+
+  function revealPass() {
+    if (!revealQueue.length) return;
+    var vh = window.innerHeight;
+    var still = [];
+    for (var i = 0; i < revealQueue.length; i++) {
+      var el = revealQueue[i];
+      var r = el.getBoundingClientRect();
+      // visible once its top edge has risen above 88% of the viewport, or if
+      // it straddles the viewport entirely (taller than the screen)
+      if (r.top < vh * 0.88 && r.bottom > 0) {
+        el.classList.add('in');
+      } else {
+        still.push(el);
+      }
+    }
+    revealQueue = still;
+  }
+
   function wireReveals() {
     var items = document.querySelectorAll('[data-reveal]');
-    if (!('IntersectionObserver' in window)) {
-      for (var i = 0; i < items.length; i++) items[i].classList.add('in');
-      return;
-    }
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('in');
-        io.unobserve(entry.target);
-      });
-    }, { threshold: 0.18, rootMargin: '0px 0px -8% 0px' });
-    for (var j = 0; j < items.length; j++) io.observe(items[j]);
+    for (var i = 0; i < items.length; i++) revealQueue.push(items[i]);
+    revealPass();
   }
 
   /* ---------------------------------------------------------------------------
@@ -157,7 +175,6 @@
      Parallax + timeline draw, driven by one rAF-throttled scroll loop
      --------------------------------------------------------------------------- */
   function wireScrollMotion() {
-    if (reduced) return;
     var layers = Array.prototype.slice.call(document.querySelectorAll('[data-parallax]'));
     var timeline = document.getElementById('timeline');
     var fill = document.getElementById('timelineFill');
@@ -166,6 +183,9 @@
     function frame() {
       queued = false;
       var vh = window.innerHeight;
+
+      revealPass();
+      if (reduced) return;
 
       layers.forEach(function (el) {
         var rect = el.getBoundingClientRect();
@@ -274,6 +294,7 @@
   prepareHeroType();
   wireGate();
   wireReveals();
+  if (reduced) revealQueue = [];
   wireCountdown();
   wireScrollMotion();
   wireForm();

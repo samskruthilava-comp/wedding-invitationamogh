@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+<link rel="preload" as="image" href="img/hero.webp" />
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="is-sealed">
@@ -81,24 +82,7 @@
     <div class="hero__frame" data-parallax="0.18">
       <div class="hero__art">
         <div class="hero__wash"></div>
-        <svg class="hero__scene" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-          <defs>
-            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#F6E9D2"/><stop offset="46%" stop-color="#EBD3B0"/><stop offset="100%" stop-color="#C9A97F"/>
-            </linearGradient>
-            <linearGradient id="hillA" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#8E9C7A"/><stop offset="100%" stop-color="#5C6A4A"/></linearGradient>
-            <linearGradient id="hillB" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#667554"/><stop offset="100%" stop-color="#3C4832"/></linearGradient>
-            <linearGradient id="lake" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#E0C79E"/><stop offset="60%" stop-color="#BFA47E"/><stop offset="100%" stop-color="#8E7C60"/></linearGradient>
-          </defs>
-          <rect width="1200" height="700" fill="url(#sky)"/>
-          <circle cx="880" cy="190" r="86" fill="#FFF6E4" opacity=".72"/><circle cx="880" cy="190" r="150" fill="#FFEFD4" opacity=".26"/>
-          <path d="M0 430 L180 300 L330 400 L470 292 L640 430 Z" fill="url(#hillA)" opacity=".85"/>
-          <path d="M520 440 L700 286 L880 402 L1030 320 L1200 452 L1200 470 L520 470 Z" fill="url(#hillB)" opacity=".9"/>
-          <rect y="452" width="1200" height="248" fill="url(#lake)"/>
-          <g opacity=".22" fill="#F7F3EA">
-            <rect x="0" y="486" width="1200" height="2" rx="1"/><rect x="120" y="530" width="960" height="2" rx="1"/><rect x="240" y="580" width="720" height="2" rx="1"/><rect x="380" y="634" width="440" height="2" rx="1"/>
-          </g>
-        </svg>
+        <img class="hero__img" src="img/hero.webp" alt="" fetchpriority="high" decoding="async" width="1920" height="1080" />
       </div>
       <div class="hero__scrim"></div>
       <span class="hero__seam"></span>
@@ -141,22 +125,7 @@
 
     <figure class="plate" data-reveal="wipe" style="--d:.18s">
       <div class="plate__inner" data-parallax="0.06">
-        <svg viewBox="0 0 800 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-          <rect width="800" height="560" fill="#D9CFBE"/>
-          <rect y="360" width="800" height="200" fill="#A8A08F"/>
-          <g fill="#EDE4D5">
-            <rect x="250" y="150" width="300" height="230" rx="4"/>
-            <path d="M240 152 400 68 560 152Z"/>
-          </g>
-          <g fill="#8E9A7C" opacity=".75">
-            <rect x="286" y="200" width="40" height="80" rx="20"/><rect x="380" y="200" width="40" height="80" rx="20"/><rect x="474" y="200" width="40" height="80" rx="20"/>
-            <rect x="366" y="300" width="68" height="80" rx="34"/>
-          </g>
-          <g fill="#5E6B4E" opacity=".8">
-            <path d="M150 380c0-60 14-120 24-120s24 60 24 120Z"/><path d="M620 380c0-52 12-104 21-104s21 52 21 104Z"/>
-          </g>
-          <g opacity=".18" fill="#FFF"><rect y="410" width="800" height="2"/><rect x="90" y="464" width="620" height="2"/></g>
-        </svg>
+        <img src="img/venue.webp" alt="The garden terrace at Casa del Lago, looking out over the lake" loading="lazy" decoding="async" width="1400" height="1056" />
       </div>
       <figcaption class="plate__cap">Saturday, 12 September 2026</figcaption>
     </figure>
@@ -242,7 +211,10 @@
   <section class="band band--tight gift">
     <p class="kicker" data-reveal>Wedding Gift</p>
     <h2 class="heading heading--script" data-reveal style="--d:.06s">Your presence is our greatest gift</h2>
-    <p class="prose__single" data-reveal style="--d:.12s">If you would like to honour us with something more, we kindly prefer a monetary contribution. Details will be shared separately with your confirmation.</p>
+    <figure class="posy" data-reveal="wipe" style="--d:.12s">
+      <img src="img/roses.webp" alt="Blush garden roses in a weathered stone urn" loading="lazy" decoding="async" width="600" height="900" />
+    </figure>
+    <p class="prose__single" data-reveal style="--d:.18s">If you would like to honour us with something more, we kindly prefer a monetary contribution. Details will be shared separately with your confirmation.</p>
   </section>
 
   <!-- ============ 11. RSVP ============ -->

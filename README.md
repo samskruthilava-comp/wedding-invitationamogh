@@ -6,6 +6,16 @@ Built as a rebuild of the *design and motion system* of richardandanita.com. All
 copy and artwork here is original placeholder material for a fictional couple. None of the
 original couple's photographs, names, event details or written passages were copied.
 
+The three photographs are generated imagery, prompted to sit in the same muted sage,
+champagne and warm sand palette as the type. Replace them with real photography for an
+actual invitation: keep the same filenames and aspect ratios and nothing else needs to change.
+
+| File | Ratio | Used by |
+|---|---|---|
+| `img/hero.webp` | 16:9 | hero background, carries the Ken Burns zoom |
+| `img/venue.webp` | 4:3 | venue plate, wipe reveal, parallax and hover zoom |
+| `img/roses.webp` | 2:3 | posy in the gift section, wipe reveal and float |
+
 ## Run
 
 ```bash
@@ -16,7 +26,8 @@ Then open http://localhost:4321
 
 ## Structure
 
-- `index.html` — markup and the inline SVG artwork (envelope texture, wax seal, hero scene, venue plate)
+- `index.html` — markup, plus the inline SVG artwork that stayed (envelope texture, wax seal, decorative rules)
+- `img/` — the three photographs, generated to match the palette and exported as webp (336K total)
 - `styles.css` — design tokens, layout, and every animation
 - `main.js` — gate choreography, text splitting, scroll reveals, countdown, parallax, RSVP
 

@@ -260,12 +260,12 @@ body.is-open .page{opacity:1}
 }
 .hero__frame{position:absolute;inset:-8% 0;will-change:transform}
 .hero__art{position:absolute;inset:0;animation:kenBurns 26s var(--ease-soft) infinite alternate}
-.hero__scene{width:100%;height:100%}
+.hero__img{width:100%;height:100%;object-fit:cover;object-position:50% 58%}
 @keyframes kenBurns{
   0%{transform:scale(1.06) translate3d(0,0,0)}
   100%{transform:scale(1.2) translate3d(-2%,-2.5%,0)}
 }
-.hero__wash{position:absolute;inset:0;z-index:1;background:linear-gradient(200deg,rgba(214,168,104,.20),rgba(120,96,64,.16) 55%,rgba(70,60,44,.24));mix-blend-mode:soft-light}
+.hero__wash{position:absolute;inset:0;z-index:1;background:linear-gradient(200deg,rgba(214,168,104,.14),rgba(70,60,44,.18));mix-blend-mode:soft-light}
 .hero__scrim{
   position:absolute;inset:0;z-index:2;
   background:
@@ -429,8 +429,8 @@ body.is-open .ch--trk{animation:chTrk 1.1s var(--ease) forwards;animation-delay:
   box-shadow:0 30px 60px -40px rgba(60,56,42,.75);
   will-change:transform;
 }
-.plate__inner svg{width:100%;height:100%;transition:transform 1.4s var(--ease)}
-.plate:hover .plate__inner svg{transform:scale(1.05)}
+.plate__inner img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
+.plate:hover .plate__inner img{transform:scale(1.05)}
 .plate__cap{
   margin:1rem 0 0;font-family:var(--sans);font-size:.62rem;
   letter-spacing:.3em;text-transform:uppercase;color:var(--ink-faint);
@@ -521,6 +521,22 @@ body.is-open .ch--trk{animation:chTrk 1.1s var(--ease) forwards;animation-delay:
 .facts{display:grid;gap:1.8rem;margin:2.6rem 0 0;width:100%;max-width:760px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
 .facts dt{font-family:var(--sans);font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:.5rem}
 .facts dd{margin:0;font-family:var(--display);font-size:clamp(1rem,.92rem + .5vw,1.25rem);color:var(--ink)}
+
+/* --- posy (gift section) --- */
+.posy{
+  margin:clamp(1.8rem,4vw,2.6rem) 0 0;width:min(300px,72%);position:relative;
+  animation:posyFloat 7s var(--ease-soft) infinite;
+}
+.posy img{
+  width:100%;height:auto;border-radius:2px;
+  border:1px solid rgba(140,144,128,.3);
+  box-shadow:0 30px 54px -34px rgba(60,56,42,.7);
+}
+.posy::after{
+  content:"";position:absolute;inset:9px;border:1px solid rgba(194,168,120,.45);
+  pointer-events:none;
+}
+@keyframes posyFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 
 /* ==========================================================================
    11. RSVP
